@@ -1,0 +1,4 @@
+listenport: 8666
+serverproto: "http"
+serverhost: "0.0.0.0"
+serverport: 80
