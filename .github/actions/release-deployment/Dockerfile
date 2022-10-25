@@ -5,7 +5,7 @@ COPY . /src
 WORKDIR /src
 
 RUN go mod tidy
-RUN CGO_ENABLED=0 GOOS=linux go build -o server
+RUN CGO_ENABLED=0 GOOS=linux go build -o captcha_server
 
 
 
@@ -16,9 +16,9 @@ LABEL org.opencontainers.image.source="https://github.com/IvanKuchin/${BUILD_REP
 
 WORKDIR /workdir
 
-COPY --from=build /src/server .
+COPY --from=build /src/captcha_server .
 COPY --from=build /src/config ./config
 
 EXPOSE 80
 
-CMD ["./server"]
+CMD ["./captcha_server"]
