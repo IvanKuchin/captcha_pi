@@ -104,9 +104,9 @@ jobs:
       ###########################################
       # Generate swagger file                   #
       ###########################################
-      - name: Generate swagger file
-        run: |
-          docker run --rm -v ${PWD}:/sss -w /sss quay.io/goswagger/swagger generate spec --scan-models -w /sss -o swagger.yaml
+      #- name: Generate swagger file
+      #  run: |
+      #    docker run --rm -v ${PWD}:/sss -w /sss quay.io/goswagger/swagger generate spec --scan-models -w /sss -o swagger.yaml
 
       ###########################################
       # Build and Push containers to registries #
