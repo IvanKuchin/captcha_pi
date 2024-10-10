@@ -26,7 +26,13 @@ jobs:
     name: Spell checking
     # Set the agent to run on
     runs-on: ubuntu-latest
-    ##################
+
+    permissions:
+      # write permission is required for autolabeler
+      # otherwise, read permission is required at least
+      pull-requests: write
+
+     ##################
     # Load all steps #
     ##################
     steps:
@@ -34,7 +40,7 @@ jobs:
       # Checkout the code base #
       ##########################
       - name: Checkout Code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       #############################
       # Run check spelling action #
