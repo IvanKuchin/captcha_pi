@@ -1,6 +1,6 @@
 module github.com/ivankuchin/captcha_pi
 
-go 1.23.0
+go 1.25.0
 
 require (
 	github.com/dchest/captcha v1.0.0
@@ -30,7 +30,7 @@ require (
 	go.uber.org/atomic v1.7.0 // indirect
 	go.uber.org/multierr v1.6.0 // indirect
 	go.uber.org/zap v1.21.0 // indirect
-	golang.org/x/net v0.38.0 // indirect
-	golang.org/x/text v0.23.0 // indirect
+	golang.org/x/net v0.55.0 // indirect
+	golang.org/x/text v0.37.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
